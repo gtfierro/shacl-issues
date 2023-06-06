@@ -1,0 +1,27 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <urn:sh_or_ambiguity/> .
+
+<urn:sh_or_ambiguity/shapes> a owl:Ontology .
+
+:or_shape a sh:NodeShape, owl:Class ;
+    sh:or ( :or_shape_1 :or_shape_2 ) .
+
+:or_shape_1 a sh:NodeShape ;
+    sh:property [
+        sh:path :path1 ;
+        sh:hasValue "value1" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+:or_shape_2 a sh:NodeShape ;
+    sh:property [
+        sh:path :path2 ;
+        sh:hasValue "value2" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+

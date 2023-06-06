@@ -1,17 +1,19 @@
 [tool.poetry]
-name = "shacl-issues"
+name = "testshacl"
 version = "0.1.0"
 description = ""
 authors = ["Gabe Fierro <gtfierro@mines.edu>"]
 license = "bsd-3-clause"
 readme = "README.md"
-packages = [{include = "shacl_issues"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 docker = "^6.1.3"
 pyshacl = "^0.23.0"
 
+[tool.poetry.scripts]
+pyshacl = "testshacl.pyshacl:main"
+topquadrant_shacl = "testshacl.topquadrant_shacl:main"
 
 [build-system]
 requires = ["poetry-core"]
