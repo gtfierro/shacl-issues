@@ -18,9 +18,14 @@ def run(folder: Path):
     }
 
     client = docker.from_env()
-    command = "infer -shapefile /data/shapes.ttl -datafile /data/data.ttl"
+    # TODO: handle inference!!
+    command = "validate -shapefile /data/shapes.ttl -datafile /data/data.ttl"
     container = client.containers.run("ghcr.io/topquadrant/shacl:1.4.2", volumes=volume_bindings, command=command)
-    print(container.decode('utf-8'))
+    logs = container.decode('utf-8')
+    with open(folder / "topquadrant_shacl" / "report.ttl", "w") as f:
+        for l in logs.splitlines():
+            if not '::' in l: # remove log output
+                f.write(f"{l}\n")
 
 
 def main():
