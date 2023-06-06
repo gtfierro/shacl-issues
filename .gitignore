@@ -1,1 +1,4 @@
 topquadrant_shacl_git/
+
+*.pyc
+__pycache__
