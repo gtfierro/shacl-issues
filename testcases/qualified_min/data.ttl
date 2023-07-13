@@ -6,4 +6,6 @@
 
 <urn:qualified_min_shape/data> a owl:Ontology .
 
-:instance1 a :qualified_min_shape .
+:instance1 a :qualified_min_shape ;
+    :path1 "value1" ;
+.

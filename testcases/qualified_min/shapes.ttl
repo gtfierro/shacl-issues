@@ -10,7 +10,7 @@
     sh:property [
         sh:path :path1 ;
         sh:qualifiedValueShapeDisjoint true ;
-        # sh:minCount 1 ;
+        sh:minCount 1 ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedValueShape [
             sh:hasValue "value1" ;
