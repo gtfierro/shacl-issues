@@ -7,6 +7,13 @@
 <urn:or_syntax/data> a owl:Ontology .
 
 :instance1 a :or_syntax ;
-    :path1 :instance2 .
+    :path1 :instance2 ;
+.
 
-:instance2 :path2 "value1" .
+:next_step a owl:class ;
+.
+
+:instance2 a :next_step ;
+    :path2 "value1" ;
+.
+

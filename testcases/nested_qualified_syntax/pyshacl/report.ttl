@@ -1,0 +1,19 @@
+@prefix : <urn:or_syntax/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode :instance1 ;
+            sh:resultMessage "Focus node does not conform to shape MinCount 1: [ sh:class :next_step ; sh:hasValue Literal(\"value1\") ; sh:path :path2 ]" ;
+            sh:resultPath :path1 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;
+            sh:sourceShape [ sh:minCount 1 ;
+                    sh:path :path1 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [ sh:class :next_step ;
+                            sh:hasValue "value1" ;
+                            sh:path :path2 ] ] ] .
+
