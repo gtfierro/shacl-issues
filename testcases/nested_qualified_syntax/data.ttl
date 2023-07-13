@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <urn:or_syntax/> .
+
+<urn:or_syntax/data> a owl:Ontology .
+
+:instance1 a :or_syntax ;
+    :path1 :instance2 ;
+.
+
+:next_step a owl:class ;
+.
+
+:instance2 a :next_step ;
+    :path2 "value1" ;
+.
+
