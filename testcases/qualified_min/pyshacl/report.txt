@@ -1,2 +1,15 @@
 Validation Report
-Conforms: True
+Conforms: False
+Results (2):
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path :path1 ]
+	Focus Node: :instance4
+	Result Path: :path1
+	Message: More than 1 values on :instance4->:path1
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path :path1 ]
+	Focus Node: :instance3
+	Result Path: :path1
+	Message: Less than 1 values on :instance3->:path1

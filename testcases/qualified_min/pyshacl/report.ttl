@@ -1,6 +1,25 @@
+@prefix : <urn:qualified_min_shape/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:ValidationReport ;
-    sh:conforms true .
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode :instance4 ;
+            sh:resultMessage "More than 1 values on :instance4->:path1" ;
+            sh:resultPath :path1 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+            sh:sourceShape _:n70e78fab2d2c4c24983b5d9f3fb63913b1 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode :instance3 ;
+            sh:resultMessage "Less than 1 values on :instance3->:path1" ;
+            sh:resultPath :path1 ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape _:n70e78fab2d2c4c24983b5d9f3fb63913b1 ] .
+
+_:n70e78fab2d2c4c24983b5d9f3fb63913b1 sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:path :path1 .
 
