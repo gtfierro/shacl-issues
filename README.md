@@ -21,6 +21,8 @@ These are abstracted behind simple Python wrappers in the `testshacl` package in
 
 ## Running Testcases
 
+*Note: be sure to run the `./build-topbraid-shacl.sh` script from the `scripts/` directory. This will create a local Docker image for the TopQuadrant SHACL implementation*
+
 Use `poetry` to run either the `pyshacl` or `topquadrant_shacl` script on a testcase directory:
 
 - `poetry run pyshacl testcases/sh_or_ambiguity`
