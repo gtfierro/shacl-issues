@@ -1,0 +1,9 @@
+Validation Report
+Conforms: False
+Results (1):
+Constraint Violation in QualifiedValueShapeConstraintComponent (http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path :path1 ; sh:qualifiedMinCount Literal("1", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:class :next_step ; sh:hasValue Literal("value1") ; sh:path :path2 ] ]
+	Focus Node: :instance1
+	Result Path: :path1
+	Message: Focus node does not conform to shape MinCount 1: [ sh:class :next_step ; sh:hasValue Literal("value1") ; sh:path :path2 ]
